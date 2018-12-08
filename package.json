@@ -12,7 +12,9 @@
     "build:watch": "babel lib -w -d build",
     "prepack": "prepack.bat",
     "dev": "webpack-dev-server --open",
-    "localpublish": "localpublish.bat"
+    "localpublish": "localpublish.bat",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "cytoscape",
@@ -52,6 +54,8 @@
   "dependencies": {
     "cytoscape": "^3.2.5",
     "cytoscape-cola": "^2.0.0",
-    "cytoscape-dagre": "^2.1.0"
-  }
+    "cytoscape-dagre": "^2.2.2",
+    "snyk": "^1.116.2"
+  },
+  "snyk": true
 }
